@@ -18,11 +18,33 @@ def sieve (n):
     i = numbers [0]
   return primes + numbers
 
-def Fermattest(p):
+def FermatTest(p): 
   from random import randrange
   return randrange(2, p) ** (p-1) % p == 1
 
-print(isPrime(13))
-print(sieve(100))
-print(Fermattest(13))
 
+def MillerRabinTest(p): #for high prime
+  from random import randrange
+  d = p - 1
+  r = 0
+  while d % 2 == 0:
+      d //= 2
+      r += 1
+  a = randrange(2, p-1)
+  x = (a ** d) % p
+  if x == 1 or x == p-1:
+      return True
+  while r>1:
+    x=(x * x)% p
+    if x == 1:
+      return False
+    if x == -1:
+      return True
+    r -= 1
+  return False  
+
+
+print("Naive: ", isPrime(13))
+print("Sieve: ", sieve(100))
+print("FermatTest: ", FermatTest(13))
+print("MillerRabinTest: ", MillerRabinTest(1103))
