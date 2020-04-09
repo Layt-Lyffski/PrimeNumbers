@@ -6,5 +6,5 @@ Understanding the prime numbers:
   <ol>the naive test</ol>
   <ol>the Sieve of Eratosthenes (Euclid a greek Mathematician of 4 and 3 century BC)</ol>
   <ol>the Fermat Test (=Fermat a "amatory" Mathematician (he was a Juristic) in the 17 century in France (Toulouse))</ol>
-  <ol>Miller Rabi Test</ol>
+  <ol>Miller Rabin Test</ol>
 </ul>
