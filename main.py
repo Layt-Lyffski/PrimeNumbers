@@ -43,6 +43,22 @@ def MillerRabinTest(p): #for high prime
     r -= 1
   return False  
 
+def odd(num):
+   for i in range(num):
+      i=2
+      if (num % i == 0):
+         return False
+      else:
+         return True
+def change(list, func):
+   oddList = []
+   for k in list:
+      if func(k):
+         oddList.append(k)
+   return oddList
+rawList = range(1, 20)
+print(rawList)
+print(change(rawList, odd))
 
 print("Naive: ", isPrime(13))
 print("Sieve: ", sieve(100))
